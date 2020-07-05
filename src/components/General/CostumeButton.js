@@ -1,15 +1,19 @@
-import React, {Fragment} from 'react';
+import React from 'react';
 
-const CostumeButton = ({parentClass, imgSrc, text, onClickButton, textClass}) => {
+const CostumeButton = ({mainClass, parentClass, imgSrc, text, onClickButton, textClass, onMouseEnter, onMouseLeave}) => {
     return (
-        <Fragment>
+        <div className={mainClass || 'buttonMainClass'} onMouseEnter={onMouseEnter}
+             onMouseLeave={onMouseLeave}>
             {imgSrc ?
-                <img alt={"src"} src={imgSrc}/> :
-                <div className={parentClass} onClick={e => onClickButton(e.target)}>
+                <img alt={"src"} src={imgSrc} className={parentClass}/> :
+                <div className={parentClass} onClick={e => {
+                    if (onClickButton)
+                        onClickButton(e.target)
+                }}>
                     <span className={textClass || ""}>{text}</span>
                 </div>
             }
-        </Fragment>
+        </div>
     );
 };
 

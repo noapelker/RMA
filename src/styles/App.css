@@ -3,3 +3,9 @@
     width: 100vw;
     height: 100vh;
 }
+.buttonMainClass{
+    text-align: center;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}

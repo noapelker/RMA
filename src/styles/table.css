@@ -8,18 +8,7 @@ table {
 th, td {
     border-bottom: 1px solid rgba(255, 255, 255, 0.7);
 }
-.statusComplete{
-    color: #39b54a;
-    border: 1px solid #39b54a;
-}
-.statusPending{
-    color: #f7931e;
-    border: 1px solid #f7931e;
-}
-.statusReject{
-    color: #ff0000;
-    border: 1px solid #ff0000;
-}
+
 .status {
     font-size: 1rem;
     width: 60%;
@@ -32,13 +21,54 @@ th, td {
     text-align: center;
 }
 
+
+.subHeaderRow {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.statusComplete {
+    color: #39b54a;
+    border: 1px solid #39b54a;
+}
+.MuiIconButton-root {
+    color: white !important;
+}
+.imgIconHalf{
+    width: 15px;
+    height: 15px;
+}
+.statusReturn {
+    color: white;
+    width: 16%;
+    position: absolute;
+    right: 10px;
+    border: 1px solid white;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.statusReturn:hover {
+    opacity: 0.8;
+}
+
+.statusPending {
+    color: #f7931e;
+    border: 1px solid #f7931e;
+}
+
+.statusReject {
+    color: #ff0000;
+    border: 1px solid #ff0000;
+}
+
 .orderContainer {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     min-height: 50%;
-    justify-content: center;
     flex: 1;
 }
 
@@ -48,17 +78,28 @@ th, td {
     text-align: left;
     font-size: 2rem;
 }
-.orderRow:hover{
+
+.orderRow:hover {
     opacity: 0.8;
     background-color: rgba(255, 255, 255, 0.2);
 }
-.orderRowHeader{
+
+.orderRowHeader {
     width: 100%;
     color: white;
     height: 70px;
     border-bottom: 4px solid rgba(255, 255, 255, 0.7);
     text-align: center;
 }
+
+.orderRowOrder {
+    width: 100%;
+    color: white;
+    height: 60px;
+    border-bottom: 4px solid rgba(255, 255, 255, 0.7);
+    text-align: center;
+}
+
 .orderRow {
     width: 100%;
     color: white;
@@ -69,6 +110,7 @@ th, td {
 }
 
 .cellTable {
-    width: 16.6%;
+    width: 12%;
+    text-align: center;
     align-items: center;
 }

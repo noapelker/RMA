@@ -14,5 +14,11 @@
 }
 
 .itemWithUnderline:hover {
-opacity: 0.5;
+    opacity: 0.5;
+}
+
+.removeDealer {
+    font-size: 1em;
+    color: white;
+    margin-left: 20px;
 }

@@ -1,28 +1,45 @@
-import React from 'react';
+import React, {useState} from 'react';
 import TableCell from "./TableCell";
 import Checkbox from '@material-ui/core/Checkbox';
 import CostumeButton from "./General/CostumeButton";
-import {VAL_IN_JSON, KEY_IN_JSON} from "../Utils"
+import {withRouter} from "react-router-dom"
 
-const TableRow = ({data, checkable, rowClass}) => {
+
+const TableRow = ({edit, data, checkable, rowClass, clickOrder, order, index}) => {
+    data.creationDate = new Date(data.creationDate);
+    const [check, setCheck] = useState(false);
 
     return (
-        <tr className={rowClass}>
+        <tr className={rowClass} onClick={_ => clickOrder(data.orderNum)}>
             {checkable && <td>
-                <Checkbox checked
-                          onChange
-                          inputProps={{'aria-label': 'primary checkbox'}}
-                /></td>}
-            {Object.entries(data).map((value, key) => (value[KEY_IN_JSON] === "status") ?
+                <Checkbox checked={check}
+                          onChange={_ => setCheck(!check)}
+                          color="#fff"
+                          inputProps={{'aria-label': 'checkbox with default color'}}/>
+            </td>}
+            <td className={'cellTable'}>{index + 1}</td>
+
+            {order.map((item, key) => (item === "status") ?
                 <td className={'cellTable'} key={key}>
-                    <CostumeButton text={value[VAL_IN_JSON]}
-                                   parentClass={"status status" + value[VAL_IN_JSON]}
+                    <CostumeButton text={data[item]}
+                                   parentClass={"status status" + data[item]}
                                    onClickButton={_ => {
                                    }}/></td>
                 : <TableCell cellClass={'cellTable'} key={key}
-                             data={value[VAL_IN_JSON]}/>)}
+                             data={data[item]}/>)}
+            {edit &&
+            <td style={{width: "60%"}}>
+                <div style={{display:"flex"}}>
+                    <CostumeButton imgSrc={'../../photos/edit.png'} parentClass={'imgIconHalf'}
+                                   onClickButton={_ => {
+                                   }}/>
+                    <CostumeButton imgSrc={'../../photos/exit.png'} parentClass={'imgIconHalf'}
+                                   onClickButton={_ => {
+                                   }}/>
+                </div>
+            </td>}
         </tr>
     );
 };
 
-export default TableRow;
+export default withRouter(TableRow);

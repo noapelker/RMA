@@ -15,6 +15,9 @@
     align-items: center;
 
 }
+.buttonPlus{
+    width: unset;
+}
 .addOrderButton {
     border-radius: 50%;
     position: absolute;

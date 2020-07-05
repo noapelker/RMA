@@ -7,13 +7,12 @@ import CostumeButton from "./General/CostumeButton";
 const RequestToAddDealer = _ => {
 
 }
-const Dealers = props => {
+const Dealers = _ => {
     return (
         <div className={'dealersContainer'}>
             <div className={'dealersTitleContainer'}>
-
                 <span className={'dealersTitle'}>{dealers.title}</span>
-                <CostumeButton parentClass={"addButton"} text={'+'}
+                <CostumeButton parentClass={"addButton"} text={'+'} mainClass={"buttonPlus"}
                                onClickButton={RequestToAddDealer}/>
             </div>
             <div className={'dealersItemsContainer'}>

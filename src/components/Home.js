@@ -1,22 +1,35 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import "../styles/home.css"
 import Dealers from "./Dealers";
 import CostumeButton from "./General/CostumeButton";
 import Table from "./Table";
-import {fakeData, Orders} from "../Textblocks";
+import {Orders} from "../Textblocks";
+import {getData} from "../Utils";
+import {withRouter} from "react-router-dom"
 
-const requestToAddOrder = _ => {
+const Home = ({history}) => {
+    const [data, setData] = useState(undefined)
+    useEffect(() => {
+        getData("orders", "GET").then(data => {
+            if (data)
+                setData(data.data)
+        })
+    }, [])
 
-}
-const Home = props => {
     return (
         <div className={'homeContainer'}>
-            <CostumeButton text={'+'} parentClass={"addOrderButton"} textClass={"addOrderText"}
-                           onClickButton={requestToAddOrder}/>
+            <CostumeButton text={'+'}  parentClass={"addOrderButton"} textClass={"addOrderText"}
+                           onClickButton={_=>history.push('/order/add')}/>
             <Dealers/>
-            <Table data={fakeData} headers={Orders.headers}/>
+            <div className={'orderContainer'}>
+
+                <h1 className={'orderTitle'}>{Orders.title}</h1>
+                {data && <Table data={data} headers={Orders.homeHeaders} clickOrder
+                                order={Orders.homeTableSort}
+                                endpoint={"orders/"}/>}`
+            </div>
         </div>
     );
 };
 
-export default Home;
+export default withRouter(Home);
