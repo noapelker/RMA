@@ -1,0 +1,31 @@
+$fullScreenVH: 100vh;
+$fullScreenVW: 100vw;
+$max: 100%;
+$themeColor: #1b1d25;
+$greenColor: #39b54a;
+$orangeColor: #f7931e;
+$redColor: #ff0000;
+$borderColor: rgba(255, 255, 255, 0.7);
+$textSize: 1rem;
+$titleSize: 1.5rem;
+$mainTitleSize: 2rem;
+$extremeSize: 3rem;
+$smallImg:15px;
+$mediumImg:20px;
+$bigImg:25px;
+$maxImg:30px;
+$popBack: rgba(255, 255, 255, 0.6);
+@function addBorder($width, $borderColor:$borderColor) {
+  @return $width solid $borderColor;
+}
+
+@mixin button($size) {
+  width: $size;
+  height: $size;
+  cursor: pointer;
+  object-fit: contain;
+  &:hover {
+    opacity: 0.8;
+  }
+}
+

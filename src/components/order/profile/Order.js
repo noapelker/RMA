@@ -1,10 +1,10 @@
 import React, {useEffect, useState, Fragment} from 'react';
-import {getData} from "../Utils";
-import Table from "./Table";
-import {Orders} from "../Textblocks";
-import "../styles/order.css"
+import {getData} from "../../../Utils";
+import Table from "../../general/Table";
+import {Orders} from "../../../Textblocks";
+import "../../../styles/order.scss"
 import OrderHeader from "./OrderHeader";
-import CostumeButton from "./General/CostumeButton";
+import CostumeButton from "../../general/CostumeButton";
 
 const Order = ({history}) => {
     const [data, setData] = useState(undefined);

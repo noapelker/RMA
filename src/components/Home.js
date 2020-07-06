@@ -1,8 +1,8 @@
 import React, {useEffect, useState} from 'react';
-import "../styles/home.css"
-import Dealers from "./Dealers";
-import CostumeButton from "./General/CostumeButton";
-import Table from "./Table";
+import "../styles/home.scss"
+import Dealers from "./dealers/Dealers";
+import CostumeButton from "./general/CostumeButton";
+import Table from "./general/Table";
 import {Orders} from "../Textblocks";
 import {getData} from "../Utils";
 import {withRouter} from "react-router-dom"

@@ -1,8 +1,8 @@
 import React from 'react';
 import Home from "./Home";
 import {BrowserRouter, Route, Switch} from "react-router-dom";
-import Order from "./Order";
-import AddOrder from "./AddOrder";
+import Order from "./order/profile/Order";
+import AddOrder from "./order/add/AddOrder";
 
 const Main = _ => {
     return (

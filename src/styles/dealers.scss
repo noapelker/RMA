@@ -1,0 +1,99 @@
+@import "styleApi";
+
+.dealersItemsContainer {
+  width: $max;
+  display: flex;
+  flex-flow: wrap;
+  justify-content: space-between;
+  height: 90%;
+}
+
+.addButton {
+  font-size: $mainTitleSize;
+  height: fit-content;
+  align-self: center;
+  color: white;
+  cursor: pointer;
+  margin-left: 20px;
+}
+
+.addButton:hover {
+  opacity: 0.5;
+}
+
+.dealersTitle {
+  font-size: $titleSize;
+  height: fit-content;
+  color: white;
+}
+
+.dealersTitleContainer {
+  display: flex;
+  width: calc(#{$max} - 20px);
+  align-items: center;
+  justify-content: center;
+}
+
+.dealersContainer {
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  height: fit-content;
+  margin-top: 100px;
+  align-self: flex-end;
+  max-height: 300px;
+}
+
+.dealerPopContainer {
+  background-color: $themeColor;
+  border: addBorder(1px);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 250px;
+  position: absolute;
+  margin-left: -50px;
+  margin-top: 40px;
+  height: 150px;
+}
+.nameContainer{
+  flex: 1;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+.nameDealer {
+  width: 90%;
+  align-self: center;
+  height: 30%;
+  background-color: $themeColor;
+  color: white;
+  outline:none;
+  font-size: $textSize;
+  border:addBorder(1px);
+}
+
+.exitButtonContainer,.submitButtonContainer {
+  width: 90%;
+  height: fit-content;
+  display: flex;
+  justify-self: center;
+  margin: 5%;
+  justify-content: flex-start;
+}
+.submitButtonContainer{
+  margin: 0;
+  justify-content: center;
+}
+.exitButton {
+  @include button($smallImg);
+}
+.submitButton {
+  @include button($bigImg);
+
+}

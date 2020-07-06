@@ -5,7 +5,7 @@ const CostumeButton = ({mainClass, parentClass, imgSrc, text, onClickButton, tex
         <div className={mainClass || 'buttonMainClass'} onMouseEnter={onMouseEnter}
              onMouseLeave={onMouseLeave}>
             {imgSrc ?
-                <img alt={"src"} src={imgSrc} className={parentClass}/> :
+                <img alt={"src"} src={imgSrc} className={parentClass} onClick={onClickButton||{}}/> :
                 <div className={parentClass} onClick={e => {
                     if (onClickButton)
                         onClickButton(e.target)

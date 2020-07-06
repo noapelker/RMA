@@ -1,6 +1,6 @@
 import React, {Fragment, useState} from 'react';
-import CostumeButton from "./General/CostumeButton";
-import IdPopup from "./IdPopup";
+import CostumeButton from "./CostumeButton";
+import IdPopup from "../IdPopup";
 
 const TableCell = ({data, cellClass}) => {
     const isObject = typeof data === 'object' && !(data instanceof Date)

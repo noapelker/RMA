@@ -1,6 +1,6 @@
 import React from 'react';
-import {Orders} from "../Textblocks";
-import CostumeButton from "./General/CostumeButton";
+import {Orders} from "../../../Textblocks";
+import CostumeButton from "../../general/CostumeButton";
 
 const titles = Orders.orderPageHeaderTitles;
 const OrderHeader = ({data, header}) => {

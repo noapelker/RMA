@@ -1,5 +1,5 @@
 import React from 'react';
-import "../styles/order.css"
+import "../styles/order.scss"
 import {Orders} from "../Textblocks";
 
 const IdPopup = ({data, opacity}) => {

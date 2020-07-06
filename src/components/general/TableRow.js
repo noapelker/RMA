@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import TableCell from "./TableCell";
 import Checkbox from '@material-ui/core/Checkbox';
-import CostumeButton from "./General/CostumeButton";
+import CostumeButton from "./CostumeButton";
 import {withRouter} from "react-router-dom"
 
 
@@ -14,7 +14,7 @@ const TableRow = ({edit, data, checkable, rowClass, clickOrder, order, index}) =
             {checkable && <td>
                 <Checkbox checked={check}
                           onChange={_ => setCheck(!check)}
-                          color="#fff"
+                          color="#fffff"
                           inputProps={{'aria-label': 'checkbox with default color'}}/>
             </td>}
             <td className={'cellTable'}>{index + 1}</td>

@@ -1,0 +1,14 @@
+@import "styleApi";
+
+
+.mainContainer {
+    background-color: $themeColor;
+    width:$fullScreenVW;
+    height: $fullScreenVH;
+}
+.buttonMainClass{
+    text-align: center;
+    display: flex;
+    width: $max;
+    justify-content: center;
+}

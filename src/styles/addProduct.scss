@@ -1,0 +1,48 @@
+@import "styleApi";
+
+.addProductContainer {
+  position: absolute;
+  width: $fullScreenVW;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: 0;
+  background-color: $popBack;
+  height: $fullScreenVH;
+}
+
+.popContainer {
+  width: 80%;
+  height: 60%;
+  background-color: $themeColor;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.exitButtonPop {
+  @include button($mediumImg);
+}
+
+
+.singleDrop{
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+  min-height: 10%;
+  min-width: 33%;
+  align-items: center;
+}
+.prefDropContainer {
+  width: 100%;
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.textDrop{
+  width: 100%;
+  text-align: center;
+}

@@ -1,0 +1,25 @@
+@import "styleApi";
+
+.itemWithUnderline {
+  border-bottom: addBorder(1px, white);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: calc(#{$max/3} - 20px);
+  height: fit-content;
+  margin: 20px 10px;
+  font-size: $textSize;
+  cursor: pointer;
+}
+
+.itemWithUnderline:hover {
+  opacity: 0.5;
+}
+
+.removeDealer {
+  font-size: $textSize;
+  color: white;
+  margin-left: 20px;
+}

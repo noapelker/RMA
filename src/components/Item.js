@@ -1,9 +1,9 @@
 import React from 'react';
-import "../styles/item.css"
+import "../styles/item.scss"
 const Item = ({parentClass,text}) => {
     return (
         <div className={parentClass}>
-            <span>{text}</span>
+            <span>{text.name}</span>
         </div>
     );
 };

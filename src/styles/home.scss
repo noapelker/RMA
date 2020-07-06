@@ -1,23 +1,28 @@
+@import "styleApi";
+
 .homeContainer {
-    width: calc(100% - 40px);
-    height: calc(100% - 40px);
+    width: calc(#{$max} - 40px);
+    height: calc(#{$max} - 40px);
     padding: 20px;
     display: flex;
     flex-direction: column;
 }
-.addOrderButton:hover{
+
+.addOrderButton:hover {
     opacity: 0.7;
     transform: scale(1.05);
 }
-.addOrderText{
+
+.addOrderText {
     border-radius: 50%;
     vertical-align: super;
     align-items: center;
-
 }
-.buttonPlus{
+
+.buttonPlus {
     width: unset;
 }
+
 .addOrderButton {
     border-radius: 50%;
     position: absolute;
@@ -27,9 +32,7 @@
     display: inline-block;
     text-align: center;
     color: white;
-    font-size: 2rem;
-    line-height: 2rem;
-    border: 2px solid white;
-    width: 40px;
-    height: 40px;
+    font-size: $mainTitleSize;
+    line-height: $mainTitleSize;
+    @include button(#{$maxImg+10});
 }
