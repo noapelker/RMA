@@ -1,14 +1,13 @@
 @import "styleApi";
 
-
 .mainContainer {
-    background-color: $themeColor;
-    width:$fullScreenVW;
-    height: $fullScreenVH;
+  @include size($fullScreenVW, $fullScreenVH);
+  background-color: $themeColor;
+  overflow: hidden;
 }
-.buttonMainClass{
-    text-align: center;
-    display: flex;
-    width: $max;
-    justify-content: center;
+
+.buttonMainClass {
+  @include flexible(row, center);
+  text-align: center;
+  width: $max;
 }

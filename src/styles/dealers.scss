@@ -1,18 +1,15 @@
 @import "styleApi";
 
 .dealersItemsContainer {
-  width: $max;
-  display: flex;
+  @include flexible(row, space-between);
+  @include size($max, 90%);
   flex-flow: wrap;
-  justify-content: space-between;
-  height: 90%;
 }
 
 .addButton {
-  font-size: $mainTitleSize;
+  @include text($mainTitleSize);
   height: fit-content;
   align-self: center;
-  color: white;
   cursor: pointer;
   margin-left: 20px;
 }
@@ -22,77 +19,65 @@
 }
 
 .dealersTitle {
-  font-size: $titleSize;
+  @include text($titleSize);
   height: fit-content;
-  color: white;
 }
 
 .dealersTitleContainer {
-  display: flex;
+  @include flexible(row, center, center);
   width: calc(#{$max} - 20px);
-  align-items: center;
-  justify-content: center;
 }
 
 .dealersContainer {
-  width: 60%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: column;
-  height: fit-content;
+  @include flexible(column, space-between, center);
+  @include size(60%, fit-content);
   margin-top: 100px;
   align-self: flex-end;
   max-height: 300px;
 }
 
 .dealerPopContainer {
+  @include flexible(column, unset, center);
+  @include size(250px,150px);
   background-color: $themeColor;
   border: addBorder(1px);
   border-radius: 10px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 250px;
   position: absolute;
   margin-left: -50px;
   margin-top: 40px;
-  height: 150px;
-}
-.nameContainer{
-  flex: 1;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  flex-direction: column;
-  width: 100%;
-}
-.nameDealer {
-  width: 90%;
-  align-self: center;
-  height: 30%;
-  background-color: $themeColor;
-  color: white;
-  outline:none;
-  font-size: $textSize;
-  border:addBorder(1px);
 }
 
-.exitButtonContainer,.submitButtonContainer {
-  width: 90%;
-  height: fit-content;
-  display: flex;
+.nameContainer {
+  @include flexible(column, space-evenly, center);
+  flex: 1;
+  width: $max;
+}
+
+.nameDealer {
+  @include size(90%,30%);
+  @include text($textSize);
+  align-self: center;
+  background-color: $themeColor;
+  outline: none;
+  border: addBorder(1px);
+}
+
+.exitButtonContainer, .submitButtonContainer {
+  @include flexible(row, flex-start);
+  @include size(90%,fit-content);
   justify-self: center;
-  margin: 5%;
-  justify-content: flex-start;
+  margin: 2%;
 }
-.submitButtonContainer{
+
+.submitButtonContainer {
+  @include flexible(row, center);
   margin: 0;
-  justify-content: center;
 }
+
 .exitButton {
   @include button($smallImg);
 }
+
 .submitButton {
   @include button($bigImg);
 

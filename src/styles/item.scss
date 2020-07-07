@@ -1,16 +1,12 @@
 @import "styleApi";
 
 .itemWithUnderline {
+  @include flexible(row, center, center);
+  @include text($textSize);
+  @include size(calc(#{$max/3} - 20px), fit-content);
   border-bottom: addBorder(1px, white);
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   text-align: center;
-  width: calc(#{$max/3} - 20px);
-  height: fit-content;
   margin: 20px 10px;
-  font-size: $textSize;
   cursor: pointer;
 }
 
@@ -19,7 +15,6 @@
 }
 
 .removeDealer {
-  font-size: $textSize;
-  color: white;
+  @include text($textSize);
   margin-left: 20px;
 }

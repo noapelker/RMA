@@ -10,16 +10,25 @@ import DropGeneral from "./DropGeneral";
 const AddOrder = _ => {
     const [addProduct, setAddProduct] = useState(false);
     const [options, setOptions] = useState()
-    const [data, setData] = useState(
-        {
-            name: 0,
-        }
-    );
+    const [data, setData] = useState(JSON.parse(sessionStorage.getItem("data")) || []);
+    const [openPop, setOpenPop] = useState(undefined);
     useEffect(() => {
         getData("dealers").then(data => {
             setOptions(data.data);
         })
     }, [])
+    const addOrder = val => {
+        let temp;
+        if (data === [])
+            temp = [data]
+        else
+            temp = data;
+        temp.push(val);
+        setData(temp);
+        sessionStorage.setItem("data", JSON.stringify(temp));
+        setAddProduct(false)
+        setOpenPop(undefined);
+    }
     return (
         <div className={'addContainer'}>
             <CostumeButton onClickButton={_ => {
@@ -30,10 +39,18 @@ const AddOrder = _ => {
                                      parentClass={'dropContainer'}
                                      title={addOrderData.dealerTitle}/>}
             <div className={'tableParentOrder'}>
-                <Table order={Orders.addOrderSort} data={data} headers={Orders.addOrderHeaders}/>
+                <Table cellClass={'cellOrder'} rowClass={"rowOrder"} order={Orders.addOrderSort}
+                       data={data} edit headers={Orders.addOrderHeaders} onEditFunc={(data) => {
+                    setOpenPop(data)
+                    setAddProduct(true);
+                }}/>
             </div>
             {addProduct &&
-            <AddProduct cancel={_ => setAddProduct(false)} addData={data => console.log(data)}/>}
+            <AddProduct cancel={_ => {
+                setAddProduct(false);
+                setOpenPop(undefined);
+            }} state={openPop}
+                        addData={data => addOrder(data)}/>}
         </div>
     );
 };

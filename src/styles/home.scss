@@ -1,38 +1,35 @@
 @import "styleApi";
 
 .homeContainer {
-    width: calc(#{$max} - 40px);
-    height: calc(#{$max} - 40px);
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
+  @include flexible(column);
+  @include size(#{$max} - 40px);
+  padding: 20px;
 }
 
 .addOrderButton:hover {
-    opacity: 0.7;
-    transform: scale(1.05);
+  opacity: 0.7;
+  transform: scale(1.05);
 }
 
 .addOrderText {
-    border-radius: 50%;
-    vertical-align: super;
-    align-items: center;
+  border-radius: 50%;
+  vertical-align: super;
+  align-items: center;
 }
 
 .buttonPlus {
-    width: unset;
+  width: unset;
 }
 
 .addOrderButton {
-    border-radius: 50%;
-    position: absolute;
-    right: 20px;
-    transition: all .1s;
-    cursor: pointer;
-    display: inline-block;
-    text-align: center;
-    color: white;
-    font-size: $mainTitleSize;
-    line-height: $mainTitleSize;
-    @include button(#{$maxImg+10});
+  @include text($mainTitleSize);
+  @include button(#{$maxImg+10});
+  border-radius: 50%;
+  position: absolute;
+  right: 20px;
+  transition: all .1s;
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  line-height: $mainTitleSize;
 }

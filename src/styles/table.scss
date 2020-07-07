@@ -12,21 +12,17 @@ th, td {
 }
 
 .status {
-  font-size: $textSize;
-  width: 60%;
-  height: 40px;
+  @include flexible(row,center,center);
+  @include size(60%,40px);
+  @include text($textSize);
   margin-right: #{$max/5};
   margin-left: #{$max/5};
-  display: flex;
-  align-items: center;
-  justify-content: center;
   text-align: center;
 }
 
 .subHeaderRow {
+  @include flexible(row,space-between);
   width: $max;
-  display: flex;
-  justify-content: space-between;
 }
 
 .statusComplete {
@@ -39,8 +35,7 @@ th, td {
 }
 
 .imgIconHalf {
-  width: 15px;
-  height: 15px;
+  @include button($smallImg)
 }
 
 .statusReturn {
@@ -104,7 +99,19 @@ th, td {
   border-bottom: addBorder(4px);
   text-align: center;
 }
-
+.rowOrder{
+  width: $max;
+  color: white;
+  height: 60px;
+  border-bottom: addBorder(4px);
+  text-align: center;
+}
+.greenWarranty{
+  color: $greenColor;
+}
+.redWarranty{
+  color: $redColor;
+}
 .orderRow {
   width: $max;
   color: white;
@@ -115,7 +122,12 @@ th, td {
 }
 
 .cellTable {
-  width: 12%;
+  width: #{$max/11};
+  text-align: center;
+  align-items: center;
+}
+.cellOrder{
+  width: #{$max/7};
   text-align: center;
   align-items: center;
 }

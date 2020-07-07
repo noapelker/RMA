@@ -1,44 +1,36 @@
 @import "styleApi";
 
 .addContainer {
-  width: calc(90% - 40px);
-  height: calc(90% - 40px);
+  @include flexible(column, space-between);
+  @include size(90%);
   padding: 5%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
 
 }
 
 .addOrderContainer {
-  width: 100%;
-  height: 70px;
+  @include size($max, 70px);
 }
 
 .dropDownContainer {
-  width: 30%;
-
-
+  width: #{$max/3};
 }
 
 .dropContainer {
+  @include flexible(row, center);
   width: 90%;
-  display: flex;
   margin-left: 5%;
   position: absolute;
   margin-right: 5%;
-  justify-content: center;
 }
 
 .MuiInput-underline:before {
   border-color: white !important;
 
 }
-.tableParentOrder{
-  flex:1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+
+.tableParentOrder {
+  @include flexible(row, center, center);
+  flex: 1;
 }
 
 .inputClassChose {
@@ -50,14 +42,14 @@
 }
 
 .choseDealerName {
-  font-size: $titleSize;
+  @include text($subTitleSize);
   margin-right: 20px;
+  font-weight: bold;
   color: white;
 }
 
 .addClass {
-  font-size: $extremeSize;
-  color: white;
+  @include text($extremeSize);
   position: absolute;
   right: 50px;
   top: 10px;

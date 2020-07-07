@@ -3,17 +3,21 @@ import TableRow from "./TableRow";
 import "../../styles/table.scss"
 import {withRouter} from "react-router-dom"
 
-const Table = ({edit, data, headers, history, endpoint, order, rowClass, checkAble, clickOrder}) => {
+const Table = ({onEditFunc, cellClass, edit, data, headers, history, endpoint, order, rowClass, checkAble, clickOrder}) => {
     return (
         <table>
+            {console.log(data)}
             <tbody>
             <tr className={"orderRowHeader"}>{headers.map((item, key) => <th
                 key={key}>{item}</th>)}</tr>
-            {Array.isArray(data)&&data.map((item, key) => <TableRow edit={edit} order={order} key={key} index={key}
-                                               data={item}
-                                               checkable={checkAble}
-                                               rowClass={rowClass || 'orderRow'} endPoint={endpoint}
-                                               clickOrder={data => clickOrder && history.push(endpoint + data)}/>)}
+            {Array.isArray(data) && data.map((item, key) => <TableRow onEditFunc={onEditFunc} cellClass={cellClass}
+                                                                      edit={edit} order={order}
+                                                                      key={key} index={key}
+                                                                      data={item}
+                                                                      checkable={checkAble}
+                                                                      rowClass={rowClass || 'orderRow'}
+                                                                      endPoint={endpoint}
+                                                                      clickOrder={data => clickOrder && history.push(endpoint + data)}/>)}
             </tbody>
         </table>
     );

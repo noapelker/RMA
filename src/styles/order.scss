@@ -1,50 +1,37 @@
 @import "styleApi";
 
 .orderPage {
-  width: $max;
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
-  height: $max;
+  @include flexible(column, space-between);
+  @include size($max);
 }
 
 .imgIcon {
   @include button($maxImg);
 }
+
 .orderPageTable {
+  @include flexible(column, space-evenly);
   width: 96%;
-  display: flex;
   margin-left: 2%;
-  flex-direction: column;
-  justify-content: space-evenly;
   flex: 1;
   margin-bottom: 100px;
 
 }
 
 .orderHeader {
-  width: 96%;
+  @include flexible(row, space-between);
+  @include text($textSize);
+  @include size(96%, 100px);
   padding: 2%;
-  color: white;
-  font-size: $textSize;
-  justify-content: space-between;
-  height: 100px;
   border-bottom: addBorder(1px);
-  display: flex;
-
 }
 
 .order {
-  height: $max;
-  justify-content: flex-end;
-  flex-direction: column;
-  display: flex;
+  @include flexible(column, flex-end, center);
+  @include size(#{$max/3}, $max);
   align-self: baseline;
-  width: #{$max/3};
   font-weight: bold;
-  align-items: center;
   padding-right: 10%;
-
 }
 
 .orderHeaderLeft {
@@ -67,29 +54,22 @@
 }
 
 .quantity {
-  display: flex;
+  @include flexible(column, unset, center);
+  @include text($textSize);
   color: white;
   width: fit-content;
   min-width: 15%;
   position: absolute;
   left: 10px;
-  font-size: $textSize;
   text-align: center;
-  align-items: center;
-  flex-direction: column;
 }
 
 .prefContainer {
+  @include size(200px,100px);
+  @include text($textSize,$themeColor);
+  @include flexible(column,space-evenly,center);
   position: absolute;
-  width: 200px;
   border-radius: 10px;
   background-color: rgba(255, 255, 255, 0.9);
-  color: $themeColor;
-  display: flex;
   margin-left: -100px;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-  font-size: $textSize;
-  height: 100px;
 }

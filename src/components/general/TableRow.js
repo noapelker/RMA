@@ -5,7 +5,7 @@ import CostumeButton from "./CostumeButton";
 import {withRouter} from "react-router-dom"
 
 
-const TableRow = ({edit, data, checkable, rowClass, clickOrder, order, index}) => {
+const TableRow = ({onEditFunc, edit, data, checkable, rowClass, clickOrder, order, index}) => {
     data.creationDate = new Date(data.creationDate);
     const [check, setCheck] = useState(false);
 
@@ -18,21 +18,22 @@ const TableRow = ({edit, data, checkable, rowClass, clickOrder, order, index}) =
                           inputProps={{'aria-label': 'checkbox with default color'}}/>
             </td>}
             <td className={'cellTable'}>{index + 1}</td>
-
-            {order.map((item, key) => (item === "status") ?
+            {order.map((item, key) => ((item === "status") ?
                 <td className={'cellTable'} key={key}>
                     <CostumeButton text={data[item]}
                                    parentClass={"status status" + data[item]}
                                    onClickButton={_ => {
                                    }}/></td>
-                : <TableCell cellClass={'cellTable'} key={key}
-                             data={data[item]}/>)}
+                : ((item === "pref" && data.warranty) ? (Object.values(data[item]).map((value, key) =>
+                    <TableCell
+                        cellClass={'cellTable'} key={key} data={value}/>)) : (
+                    <TableCell cellClass={'cellTable'} key={key} data={data[item]}/>))))
+            }
             {edit &&
-            <td style={{width: "60%"}}>
-                <div style={{display:"flex"}}>
+            <td style={{width: "10%"}}>
+                <div style={{display: "flex"}}>
                     <CostumeButton imgSrc={'../../photos/edit.png'} parentClass={'imgIconHalf'}
-                                   onClickButton={_ => {
-                                   }}/>
+                                   onClickButton={_ => onEditFunc(data)}/>
                     <CostumeButton imgSrc={'../../photos/exit.png'} parentClass={'imgIconHalf'}
                                    onClickButton={_ => {
                                    }}/>

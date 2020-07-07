@@ -1,48 +1,111 @@
 @import "styleApi";
 
 .addProductContainer {
+  @include flexible(row, center, center);
+  @include size($fullScreenVW,$fullScreenVH);
   position: absolute;
-  width: $fullScreenVW;
   top: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   left: 0;
   background-color: $popBack;
-  height: $fullScreenVH;
 }
 
 .popContainer {
-  width: 80%;
-  height: 60%;
+  @include flexible(column, space-between);
+  @include size(80%,60%);
   background-color: $themeColor;
   border-radius: 20px;
-  display: flex;
-  flex-direction: column;
+}
 
+.multipleContainer {
+  @include flexible(row, space-evenly, center);
+  @include size(60%,20%);
+  color: white;
+  align-self: center;
+  font-weight: bold;
 }
 
 .exitButtonPop {
   @include button($mediumImg);
 }
 
+.checkContainer {
+  width: fit-content;
+  margin-right: 10px;
+}
 
-.singleDrop{
-  display: flex;
-  flex-direction: column;
-  height: fit-content;
-  min-height: 10%;
-  min-width: 33%;
-  align-items: center;
+.singleDrop {
+  @include flexible(column, center, center);
+  height: #{$max/5};
+  min-width: #{$max/3};
 }
+
 .prefDropContainer {
-  width: 100%;
-  display: flex;
-  flex: 1;
-  align-items: center;
-  justify-content: space-evenly;
+  @include flexible(row, space-evenly, center);
+  @include size($max,#{$max/5});
 }
-.textDrop{
-  width: 100%;
+
+.textDrop {
+  width: $max;
   text-align: center;
+}
+
+.rootText {
+  border-color: white;
+}
+
+.animateInput {
+  color: white !important;
+  width: $max;
+  font-weight: bold !important;
+}
+
+.animateInputText {
+  color: white !important;
+}
+
+.submitButtonContainer {
+  @include flexible(row, center, center);
+  @include size($max,calc(15% - 40px));
+  margin-bottom: 20px;
+}
+
+.submitButtonPop {
+  @include button($maxImg)
+}
+
+.warrantyContainer {
+  @include flexible(column, center, center);
+  @include size(40%,#{$max/5});
+  align-self: center;
+}
+
+.warrantyTitle {
+  @include text($subTitleSize);
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.yesWarrantyText {
+  cursor: pointer;
+  color: $greenColor;
+  padding: 5px;
+  width: fit-content;
+}
+
+.noWarrantyText {
+  color: $redColor;
+  cursor: pointer;
+  padding: 5px;
+  width: fit-content;
+}
+
+.noWarrantyText:hover, .yesWarrantyText:hover {
+  transform: scale(1.2);
+  font-weight: bold;
+}
+
+.problemContainer {
+  @include flexible(row, center, center);
+  @include size(#{$max/3},$max);
+  align-self: center;
 }

@@ -53,7 +53,10 @@ export const titles = {
     unit: "Unit",
     version: "Version",
     touch: "Touch",
-    ps: "P.S"
+    ps: "P.S",
+    multiple: "Multiple",
+    warranty: "Warranty",
+    warrantyText: ["NO", "YES"]
 }
 export const versionOptions = [
     {
