@@ -20,7 +20,12 @@
 .buttonPlus {
   width: unset;
 }
-
+.settingsButton {
+  @include button($maxImg);
+  border-radius: 50%;
+  position: absolute;
+  left: 20px;
+}
 .addOrderButton {
   @include text($mainTitleSize);
   @include button(#{$maxImg+10});

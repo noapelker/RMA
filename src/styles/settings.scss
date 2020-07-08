@@ -1,0 +1,20 @@
+@import "styleApi";
+
+.settingsContainer {
+  width: $max;
+  height: $max;
+}
+
+.unitsHeaderContainer {
+  @include size($max, 20%);
+  @include flexible(row, center, center);
+}
+
+.unitsTitle {
+  @include text($mainTitleSize)
+}
+
+.unitDrop {
+  @include size(40%,20%);
+  @include flexible(row, center, center)
+}

@@ -7,13 +7,12 @@ const DropGeneral = ({parentClass, textClass, title, options, data, setData}) =>
         <div className={parentClass}>
             <span className={'choseDealerName ' + textClass}>{title}</span>
             <div className={'dropDownContainer'}>
-                {Array.isArray(options) && <Select value={data || 0} fullWidth classes={{
+                {Array.isArray(options) && <Select value={data} fullWidth classes={{
                     icon: `iconColor`, root: `inputClassChose`
                 }} onChange={event => {
                     setData(event.target.value)
                 }} label={"noa"}>
-                    {options.map((item, key) => <MenuItem key={key}
-                                                          value={key}>{item.name}</MenuItem>)}
+                    {options.map((item, key) =>  <MenuItem key={key} value={item}>{item}</MenuItem>)}
                 </Select>}
             </div>
         </div>

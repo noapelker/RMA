@@ -6,11 +6,11 @@ import {withRouter} from "react-router-dom"
 const Table = ({onEditFunc, cellClass, edit, data, headers, history, endpoint, order, rowClass, checkAble, clickOrder}) => {
     return (
         <table>
-            {console.log(data)}
             <tbody>
             <tr className={"orderRowHeader"}>{headers.map((item, key) => <th
                 key={key}>{item}</th>)}</tr>
-            {Array.isArray(data) && data.map((item, key) => <TableRow onEditFunc={onEditFunc} cellClass={cellClass}
+            {Array.isArray(data) && data.map((item, key) => <TableRow onEditFunc={onEditFunc}
+                                                                      cellClass={cellClass}
                                                                       edit={edit} order={order}
                                                                       key={key} index={key}
                                                                       data={item}

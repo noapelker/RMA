@@ -12,15 +12,14 @@
 }
 
 .dropDownContainer {
-  width: #{$max/3};
+  width: #{$max/2};
 }
 
 .dropContainer {
   @include flexible(row, center);
-  width: 90%;
-  margin-left: 5%;
+  width: 50%;
+  align-self: center;
   position: absolute;
-  margin-right: 5%;
 }
 
 .MuiInput-underline:before {

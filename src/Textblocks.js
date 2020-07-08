@@ -5,8 +5,8 @@ export const Orders = {
     title: "Orders",
     quantity: "No Of Products",
     homeHeaders: ["No.", "Client Name", "Order No.", "Quantity", "Start Date", "End Date", "Status"],
-    addOrderHeaders: ["No.", "Unit", "Version", "Touch", "P.S", "Warranty", ""],
-    addOrderSort: ["unit", "pref", "warranty"],
+    addOrderHeaders: ["No.","Quantity", "Unit", "Version", "Touch", "P.S", "Warranty", ""],
+    addOrderSort: ["quantity","name", "pref", "warranty"],
     orderHeaders: ["Select", "No.", "quantity", "Unit", "Id", "Problem", "Progress", "Comments", "Status", ""],
     homeTableSort: ['name', 'orderNum', 'quantity', 'creationDate', 'endDate', 'status'],
     orderTableSort: ['quantity', 'unit', 'pref', 'problem', 'progress', 'comments', 'status'],
@@ -51,6 +51,7 @@ export const unitsOptions = [
 ]
 export const titles = {
     unit: "Unit",
+    problems:"Problems",
     version: "Version",
     touch: "Touch",
     ps: "P.S",

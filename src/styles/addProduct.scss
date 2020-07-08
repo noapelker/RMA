@@ -35,8 +35,9 @@
 
 .singleDrop {
   @include flexible(column, center, center);
-  height: #{$max/5};
-  min-width: #{$max/3};
+  min-height: #{$max/5};
+  height: fit-content;
+  min-width: #{$max/4};
 }
 
 .prefDropContainer {
@@ -45,7 +46,7 @@
 }
 
 .textDrop {
-  width: $max;
+  width: fit-content;
   text-align: center;
 }
 
