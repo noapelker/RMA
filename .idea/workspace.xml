@@ -2,25 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8e3edcad-611b-4e26-aca1-84bb31665b06" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/Photos/settings.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/general/Settings.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/order/add/DropNew.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/settings.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Textblocks.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Textblocks.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Home.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/general/Table.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/general/Table.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/order/add/AddOrder.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/order/add/AddOrder.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/order/add/AddProduct.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/order/add/AddProduct.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/order/add/DropContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/order/add/DropContainer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/order/add/DropGeneral.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/order/add/DropGeneral.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/order/add/MultipleHandler.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/order/add/MultipleHandler.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/order/add/ProblemHandler.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/order/add/ProblemHandler.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/order/add/Warranty.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/order/add/Warranty.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/addOrder.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/addOrder.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/addProduct.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/addProduct.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/home.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/home.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -152,6 +137,7 @@
       <workItem from="1594025507731" duration="14575000" />
       <workItem from="1594105205214" duration="15747000" />
       <workItem from="1594191936850" duration="16434000" />
+      <workItem from="1594216953355" duration="2112000" />
     </task>
     <task id="LOCAL-00001" summary="base home page FE">
       <created>1593524895157</created>
@@ -188,7 +174,14 @@
       <option name="project" value="LOCAL" />
       <updated>1594216941749</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="home page&#10;order page">
+      <created>1594216957051</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1594216957051</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -200,14 +193,14 @@
     <option name="LAST_COMMIT_MESSAGE" value="home page&#10;order page" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="483" y="91" key="CommitChangelistDialog2" timestamp="1594216941495">
+    <state x="483" y="91" key="CommitChangelistDialog2" timestamp="1594216956878">
       <screen x="0" y="23" width="1920" height="965" />
     </state>
     <state x="423" y="89" key="CommitChangelistDialog2/0.23.1680.942@0.23.1680.942" timestamp="1594041114831" />
     <state x="423" y="98" key="CommitChangelistDialog2/0.23.1680.945@0.23.1680.945" timestamp="1593524894945" />
     <state x="423" y="98" key="CommitChangelistDialog2/0.23.1680.947@0.23.1680.947" timestamp="1590064644278" />
     <state x="483" y="91" key="CommitChangelistDialog2/0.23.1920.972/1920.23.1680.1027@0.23.1920.972" timestamp="1594123134526" />
-    <state x="483" y="91" key="CommitChangelistDialog2/1920.23.1680.1027/0.23.1920.965@0.23.1920.965" timestamp="1594216941495" />
+    <state x="483" y="91" key="CommitChangelistDialog2/1920.23.1680.1027/0.23.1920.965@0.23.1920.965" timestamp="1594216956878" />
     <state x="492" y="279" key="EditFileWatcherDialog" timestamp="1594018532702">
       <screen x="0" y="23" width="1680" height="942" />
     </state>
@@ -240,13 +233,13 @@
       <screen x="0" y="23" width="1680" height="942" />
     </state>
     <state x="341" y="133" key="SettingsEditor/0.23.1680.942@0.23.1680.942" timestamp="1593956614016" />
-    <state x="503" y="226" key="Vcs.Push.Dialog.v2" timestamp="1594216943530">
+    <state x="503" y="226" key="Vcs.Push.Dialog.v2" timestamp="1594216958834">
       <screen x="0" y="23" width="1920" height="965" />
     </state>
     <state x="440" y="221" key="Vcs.Push.Dialog.v2/0.23.1680.942@0.23.1680.942" timestamp="1594041117511" />
     <state x="440" y="222" key="Vcs.Push.Dialog.v2/0.23.1680.945@0.23.1680.945" timestamp="1593524940437" />
     <state x="503" y="227" key="Vcs.Push.Dialog.v2/0.23.1920.972/1920.23.1680.1027@0.23.1920.972" timestamp="1594123136072" />
-    <state x="503" y="226" key="Vcs.Push.Dialog.v2/1920.23.1680.1027/0.23.1920.965@0.23.1920.965" timestamp="1594216943530" />
+    <state x="503" y="226" key="Vcs.Push.Dialog.v2/1920.23.1680.1027/0.23.1920.965@0.23.1920.965" timestamp="1594216958834" />
     <state x="13" y="119" width="1720" height="772" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1594115976821">
       <screen x="0" y="23" width="1920" height="972" />
     </state>

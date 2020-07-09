@@ -8,17 +8,29 @@ import {getData} from "../../../Utils";
 import DropGeneral from "./DropGeneral";
 
 const AddOrder = _ => {
+
+    //Add product pop
     const [addProduct, setAddProduct] = useState(false);
+
+    //dealers options
     const [options, setOptions] = useState()
+
+    //Order all data
     const [data, setData] = useState(JSON.parse(sessionStorage.getItem("data")) || []);
+
+    //On edit - row values
     const [openPop, setOpenPop] = useState(undefined);
     useEffect(() => {
         getData("dealers").then(data => {
             setOptions(data.data.map(item => item.name));
         })
     }, [])
-    const addOrder = val => {
+
+    //Add order row
+    const addToOrder = val => {
         let temp;
+
+        //First item
         if (data === [])
             temp = []
         else
@@ -28,14 +40,17 @@ const AddOrder = _ => {
         sessionStorage.setItem("data", JSON.stringify(temp));
         setAddProduct(false)
     }
-    const deleteOrder = val => {
+
+    //Delete row from order
+    const deleteFromOrder = val => {
         // let index = data.indexOf(val)
     }
-    const editOrder = val => {
+
+    //Edit single row
+    const editProduct = val => {
         let index = data.indexOf(openPop)
         let temp = data;
         if (temp) {
-            console.log(val)
             temp[index] = val;
             setData(temp);
         }
@@ -44,31 +59,37 @@ const AddOrder = _ => {
     }
     return (
         <div className={'addContainer'}>
-            <CostumeButton onClickButton={_ => {
+
+            <CostumeButton onClickButton={() => {
                 setAddProduct(true)
             }} parentClass={'addProductButton'} text={"+"} textClass={'addClass'}/>
+
+            {/*Dealer dropdown on order page*/}
             {options && <DropGeneral options={options} data={data.name || options[0]}
                                      setData={name => setData({...data, name})}
                                      parentClass={'dropContainer'}
                                      title={addOrderData.dealerTitle}/>}
+
             <div className={'tableParentOrder'}>
                 <Table cellClass={'cellOrder'} rowClass={"rowOrder"} order={Orders.addOrderSort}
                        data={data} edit headers={Orders.addOrderHeaders}
-                       onDeleteOrder={val => deleteOrder(val)} onEditFunc={(data) => {
+                       onDeleteOrder={val => deleteFromOrder(val)} onEditFunc={(data) => {
+                    //update the pop from the current edit row
                     setOpenPop(data)
                     setAddProduct(true);
                 }}/>
             </div>
+
             {addProduct &&
-            <AddProduct cancel={_ => {
+            <AddProduct cancel={() => {
                 setAddProduct(false);
                 setOpenPop(undefined);
-            }} orderVal={openPop}
-                        addData={data => {
-                            if (openPop) {
-                                editOrder(data)
-                            } else addOrder(data)
-                        }}/>}
+            }} orderVal={openPop} addData={data => {
+                if (openPop) {
+                    //Submit changes on exist row
+                    editProduct(data)
+                } else addToOrder(data)
+            }}/>}
         </div>
     );
 };

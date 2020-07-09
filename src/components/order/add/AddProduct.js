@@ -5,14 +5,23 @@ import DropContainer from "./DropContainer";
 import MultipleHandler from "./MultipleHandler";
 import Warranty from "./Warranty";
 import {getData} from "../../../Utils";
+
 const imgSrcBasePath = "../../../photos/"
 
 const AddProduct = ({orderVal, cancel, addData}) => {
+
+    //All units general data
     const [data, setData] = useState(undefined)
+
+    //Current chosen data
     const [unit, setUnit] = useState({})
+
     useEffect(() => {
             getData("units", "GET").then(data => {
                 let temp;
+
+                //OrderVal===edit row
+                //If new row- set everything to default
                 temp = orderVal || data.data[0]
                 setUnit({
                     name: temp.name,
@@ -27,6 +36,8 @@ const AddProduct = ({orderVal, cancel, addData}) => {
             })
         },
         [])
+
+    //Add row
     const submitProduct = () => {
         const temp = {
             name: unit.name,
@@ -45,13 +56,22 @@ const AddProduct = ({orderVal, cancel, addData}) => {
         <div className={'addProductContainer'}>
             {data && unit &&
             <div className={'popContainer'}>
+
+                {/*Cancel button*/}
                 <CostumeButton mainClass={'exitButtonContainer'} parentClass={"exitButtonPop"}
                                onClickButton={cancel}
                                imgSrc={imgSrcBasePath + 'exit.png'}/>
+
+                {/*Pref and Problems handler*/}
                 <DropContainer allDataUnits={data} chosenUnit={unit} setUnit={setUnit}/>
+
+                {/*Quantity handler*/}
                 <MultipleHandler quantity={unit.quantity}
                                  setData={quantity => setUnit({...unit, quantity})}/>
+                {/*Warranty handler*/}
                 <Warranty data={unit.warranty} setData={warranty => setUnit({...unit, warranty})}/>
+
+                {/*Submit button*/}
                 <CostumeButton mainClass={'submitButtonContainer'} parentClass={"submitButtonPop"}
                                onClickButton={submitProduct}
                                imgSrc={imgSrcBasePath + 'submit.png'}/>
