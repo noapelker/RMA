@@ -36,11 +36,17 @@ $popBack: rgba(255, 255, 255, 0.6);
   width: $width;
   height: $height;
 }
+@mixin pop($width,$height:$width,) {
+  width: $width;
+  height: $height;
+  background-color: $themeColor;
+  border-radius: 10px;
+}
 
-@mixin button($size) {
-  width: $size;
+@mixin button($width,$height:$width) {
+  width: $width;
   transition: all 50ms;
-  height: $size;
+  height: $height;
   cursor: pointer;
   object-fit: contain;
   &:hover {

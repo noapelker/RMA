@@ -12,8 +12,8 @@ th, td {
 }
 
 .status {
-  @include flexible(row,center,center);
-  @include size(60%,40px);
+  @include flexible(row, center, center);
+  @include size(60%, 40px);
   @include text($textSize);
   margin-right: #{$max/5};
   margin-left: #{$max/5};
@@ -21,13 +21,29 @@ th, td {
 }
 
 .subHeaderRow {
-  @include flexible(row,space-between);
+  @include flexible(row, space-between);
   width: $max;
 }
 
 .statusComplete {
   color: $greenColor;
-  border: addBorder(1px,$greenColor);
+  border: addBorder(1px, $greenColor);
+}
+
+.delete {
+  color: $redColor;
+  border: addBorder(1px, $redColor);
+  margin: 0;
+  @include button(#{$max/2}, 40px);
+  left: 10px;
+}
+
+.mainClassDelete {
+  width: 40%;
+  position: absolute;
+  height: fit-content;
+  top: calc(100px + 8%);
+  left: 5px;
 }
 
 .MuiIconButton-root {
@@ -55,12 +71,12 @@ th, td {
 
 .statusPending {
   color: $orangeColor;
-  border: addBorder(1px,$orangeColor);
+  border: addBorder(1px, $orangeColor);
 }
 
 .statusReject {
   color: $redColor;
-  border: addBorder(1px,$redColor);
+  border: addBorder(1px, $redColor);
 }
 
 .orderContainer {
@@ -99,19 +115,23 @@ th, td {
   border-bottom: addBorder(4px);
   text-align: center;
 }
-.rowOrder{
+
+.rowOrder {
   width: $max;
   color: white;
   height: 60px;
   border-bottom: addBorder(4px);
   text-align: center;
 }
-.greenWarranty{
+
+.greenWarranty {
   color: $greenColor;
 }
-.redWarranty{
+
+.redWarranty {
   color: $redColor;
 }
+
 .orderRow {
   width: $max;
   color: white;
@@ -126,7 +146,8 @@ th, td {
   text-align: center;
   align-items: center;
 }
-.cellOrder{
+
+.cellOrder {
   width: #{$max/7};
   text-align: center;
   align-items: center;

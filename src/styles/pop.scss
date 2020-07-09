@@ -1,0 +1,40 @@
+@import "styleApi";
+
+.mediumPopUp {
+  @include flexible(column, center, center);
+  @include pop(30%, 25%)
+}
+
+.popUp {
+  @include flexible(column, space-evenly, center);
+}
+.popUpNoButton{
+  @include size($max)
+}
+.popUpButtonContainer {
+  @include text($subTitleSize);
+  border: addBorder(1px, white);
+  @include button(40%, unset);
+  padding: 1%;
+  text-align: center;
+}
+
+.popButtonContainer {
+  @include flexible(row, space-around, center);
+  width: 100%;
+  align-self: center;
+  flex: 1;
+}
+
+.textPop{
+  @include text($textSize)
+}
+.titlePop{
+  @include text($subTitleSize)
+}
+.textContainerPop {
+  width: 100%;
+  height: 70%;
+  text-align: center;
+  @include flexible(column, space-evenly, center);
+}

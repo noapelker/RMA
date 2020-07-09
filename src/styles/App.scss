@@ -3,11 +3,22 @@
 .mainContainer {
   @include size($fullScreenVW, $fullScreenVH);
   background-color: $themeColor;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 .buttonMainClass {
   @include flexible(row, center);
   text-align: center;
   width: $max;
+}
+
+.addProductContainer {
+  @include flexible(row, center, center);
+  @include size($fullScreenVW, $fullScreenVH);
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: white;
+  z-index: 3;
+  background-color: $popBack;
 }

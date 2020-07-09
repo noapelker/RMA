@@ -2,14 +2,15 @@ import React from 'react';
 
 const CostumeButton = ({mainClass, parentClass, imgSrc, text, onClickButton, textClass, onMouseEnter, onMouseLeave}) => {
     return (
-        <div className={mainClass || 'buttonMainClass'} onMouseEnter={onMouseEnter}
+        <div className={mainClass || 'buttonMainClass'} onMouseEnter={onMouseEnter} onClick={e => {
+            if (onClickButton)
+                onClickButton(e.target)
+        }}
              onMouseLeave={onMouseLeave}>
             {imgSrc ?
-                <img alt={"src"} src={imgSrc} className={parentClass} onClick={onClickButton||{}}/> :
-                <div className={parentClass} onClick={e => {
-                    if (onClickButton)
-                        onClickButton(e.target)
-                }}>
+                <img alt={"src"} src={imgSrc} className={parentClass}
+                     onClick={onClickButton || {}}/> :
+                <div className={parentClass}>
                     <span className={textClass || ""}>{text}</span>
                 </div>
             }

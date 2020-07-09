@@ -5,16 +5,14 @@ import CostumeButton from "./CostumeButton";
 import {withRouter} from "react-router-dom"
 
 
-const TableRow = ({onEditFunc, edit, data, checkable, rowClass, clickOrder, order, index}) => {
+const TableRow = ({showPref,onDeleteOrder, onEditFunc, edit, data, checkable, rowClass, clickOrder, order, index}) => {
     data.creationDate = new Date(data.creationDate);
     const [check, setCheck] = useState(false);
-
     return (
         <tr className={rowClass} onClick={_ => clickOrder(data.orderNum)}>
             {checkable && <td>
                 <Checkbox checked={check}
                           onChange={_ => setCheck(!check)}
-                          color="#fffff"
                           inputProps={{'aria-label': 'checkbox with default color'}}/>
             </td>}
             <td className={'cellTable'}>{index + 1}</td>
@@ -24,10 +22,10 @@ const TableRow = ({onEditFunc, edit, data, checkable, rowClass, clickOrder, orde
                                    parentClass={"status status" + data[item]}
                                    onClickButton={_ => {
                                    }}/></td>
-                : ((item === "pref" && data.warranty) ? (Object.values(data[item]).map((value, key) =>
+                : ((item === "pref" && showPref) ? (Object.values(data[item]).map((value, key) =>
                     <TableCell
                         cellClass={'cellTable'} key={key} data={value}/>)) : (
-                    <TableCell cellClass={'cellTable'} key={key} data={data[item]}/>))))
+                    <TableCell cellClass={'cellTable'} key={key} data={data[item]||'In Progress'}/>))))
             }
             {edit &&
             <td style={{width: "10%"}}>
@@ -36,6 +34,7 @@ const TableRow = ({onEditFunc, edit, data, checkable, rowClass, clickOrder, orde
                                    onClickButton={_ => onEditFunc(data)}/>
                     <CostumeButton imgSrc={'../../photos/exit.png'} parentClass={'imgIconHalf'}
                                    onClickButton={_ => {
+                                       onDeleteOrder(data)
                                    }}/>
                 </div>
             </td>}

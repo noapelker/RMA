@@ -3,13 +3,14 @@ export const dealers = {
 }
 export const Orders = {
     title: "Orders",
+    deleteTitle: "Delete Order",
     quantity: "No Of Products",
     homeHeaders: ["No.", "Client Name", "Order No.", "Quantity", "Start Date", "End Date", "Status"],
-    addOrderHeaders: ["No.","Quantity", "Unit", "Version", "Touch", "P.S", "Warranty", ""],
-    addOrderSort: ["quantity","name", "pref", "warranty"],
+    addOrderHeaders: ["No.", "Quantity", "Unit", "Version", "Touch", "P.S", "Warranty", ""],
+    addOrderSort: ["quantity", "name", "pref", "warranty"],
     orderHeaders: ["Select", "No.", "quantity", "Unit", "Id", "Problem", "Progress", "Comments", "Status", ""],
     homeTableSort: ['name', 'orderNum', 'quantity', 'creationDate', 'endDate', 'status'],
-    orderTableSort: ['quantity', 'unit', 'pref', 'problem', 'progress', 'comments', 'status'],
+    orderTableSort: ['quantity', 'name', 'pref', 'problem', 'progress', 'comments', 'status'],
     orderPageHeaderTitles: {
         name: "Name: ",
         phone: "Phone: ",
@@ -27,6 +28,12 @@ export const Orders = {
 }
 export const addOrderData = {
     dealerTitle: "Dealer Name: "
+}
+export const popUp = {
+    deletePop: {
+        title: "Order No. #",
+        text: "Are you sure you want to delete this order?"
+    }
 }
 export const unitsOptions = [
     {
@@ -51,7 +58,7 @@ export const unitsOptions = [
 ]
 export const titles = {
     unit: "Unit",
-    problems:"Problems",
+    problems: "Problems",
     version: "Version",
     touch: "Touch",
     ps: "P.S",

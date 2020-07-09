@@ -80,7 +80,7 @@ const AddProduct = ({cancel, orderVal, addData}) => {
                 })
         })
 
-    }, [])
+    }, [orderVal])
     return (
         <div className={'addProductContainer'}>
             <div className={'popContainer'}>

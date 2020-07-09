@@ -1,13 +1,6 @@
 @import "styleApi";
 
-.addProductContainer {
-  @include flexible(row, center, center);
-  @include size($fullScreenVW, $fullScreenVH);
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-color: $popBack;
-}
+
 
 .popContainer {
   @include flexible(column, space-between);
