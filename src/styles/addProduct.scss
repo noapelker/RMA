@@ -2,7 +2,7 @@
 
 .addProductContainer {
   @include flexible(row, center, center);
-  @include size($fullScreenVW,$fullScreenVH);
+  @include size($fullScreenVW, $fullScreenVH);
   position: absolute;
   top: 0;
   left: 0;
@@ -11,14 +11,14 @@
 
 .popContainer {
   @include flexible(column, space-between);
-  @include size(80%,60%);
+  @include size(80%, 60%);
   background-color: $themeColor;
   border-radius: 20px;
 }
 
 .multipleContainer {
   @include flexible(row, space-evenly, center);
-  @include size(60%,20%);
+  @include size(60%, 20%);
   color: white;
   align-self: center;
   font-weight: bold;
@@ -42,7 +42,9 @@
 
 .prefDropContainer {
   @include flexible(row, space-evenly, center);
-  @include size($max,#{$max/5});
+  @include size($max, #{$max/5});
+  flex-wrap: wrap;
+  color: white;
 }
 
 .textDrop {
@@ -66,7 +68,7 @@
 
 .submitButtonContainer {
   @include flexible(row, center, center);
-  @include size($max,calc(15% - 40px));
+  @include size($max, calc(15% - 40px));
   margin-bottom: 20px;
 }
 
@@ -76,7 +78,7 @@
 
 .warrantyContainer {
   @include flexible(column, center, center);
-  @include size(40%,#{$max/5});
+  @include size(40%, #{$max/5});
   align-self: center;
 }
 
@@ -107,6 +109,6 @@
 
 .problemContainer {
   @include flexible(row, center, center);
-  @include size(#{$max/3},$max);
+  @include size(#{$max/3}, $max);
   align-self: center;
 }

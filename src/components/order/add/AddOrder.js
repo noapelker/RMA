@@ -3,10 +3,9 @@ import "../../../styles/addOrder.scss"
 import CostumeButton from "../../general/CostumeButton";
 import Table from "../../general/Table";
 import {addOrderData, Orders} from "../../../Textblocks";
-import AddProduct from "./AddProduct";
 import {getData} from "../../../Utils";
 import DropGeneral from "./DropGeneral";
-
+import AddProduct from "./AddProduct";
 const AddOrder = _ => {
 
     //Add product pop
@@ -29,8 +28,6 @@ const AddOrder = _ => {
     //Add order row
     const addToOrder = val => {
         let temp;
-
-        //First item
         if (data === [])
             temp = []
         else
@@ -59,7 +56,6 @@ const AddOrder = _ => {
     }
     return (
         <div className={'addContainer'}>
-
             <CostumeButton onClickButton={() => {
                 setAddProduct(true)
             }} parentClass={'addProductButton'} text={"+"} textClass={'addClass'}/>
@@ -74,12 +70,10 @@ const AddOrder = _ => {
                 <Table cellClass={'cellOrder'} rowClass={"rowOrder"} order={Orders.addOrderSort}
                        data={data} edit headers={Orders.addOrderHeaders}
                        onDeleteOrder={val => deleteFromOrder(val)} onEditFunc={(data) => {
-                    //update the pop from the current edit row
                     setOpenPop(data)
                     setAddProduct(true);
                 }}/>
             </div>
-
             {addProduct &&
             <AddProduct cancel={() => {
                 setAddProduct(false);

@@ -6,6 +6,9 @@
       <change beforePath="$PROJECT_DIR$/src/components/order/add/AddOrder.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/order/add/AddOrder.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/order/add/AddProduct.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/order/add/AddProduct.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/order/add/DropContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/order/add/DropContainer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/order/add/DropNew.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/order/add/MultipleHandler.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/order/add/MultipleHandler.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/addProduct.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/addProduct.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -137,7 +140,8 @@
       <workItem from="1594025507731" duration="14575000" />
       <workItem from="1594105205214" duration="15747000" />
       <workItem from="1594191936850" duration="16434000" />
-      <workItem from="1594216953355" duration="2112000" />
+      <workItem from="1594216953355" duration="2125000" />
+      <workItem from="1594275715843" duration="18377000" />
     </task>
     <task id="LOCAL-00001" summary="base home page FE">
       <created>1593524895157</created>
@@ -181,7 +185,14 @@
       <option name="project" value="LOCAL" />
       <updated>1594216957051</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="home page&#10;order page">
+      <created>1594264527318</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1594264527318</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -193,9 +204,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="home page&#10;order page" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="483" y="91" key="CommitChangelistDialog2" timestamp="1594216956878">
-      <screen x="0" y="23" width="1920" height="965" />
+    <state x="423" y="82" key="CommitChangelistDialog2" timestamp="1594264527186">
+      <screen x="0" y="23" width="1680" height="935" />
     </state>
+    <state x="423" y="82" key="CommitChangelistDialog2/0.23.1680.935@0.23.1680.935" timestamp="1594264527186" />
     <state x="423" y="89" key="CommitChangelistDialog2/0.23.1680.942@0.23.1680.942" timestamp="1594041114831" />
     <state x="423" y="98" key="CommitChangelistDialog2/0.23.1680.945@0.23.1680.945" timestamp="1593524894945" />
     <state x="423" y="98" key="CommitChangelistDialog2/0.23.1680.947@0.23.1680.947" timestamp="1590064644278" />
@@ -233,16 +245,18 @@
       <screen x="0" y="23" width="1680" height="942" />
     </state>
     <state x="341" y="133" key="SettingsEditor/0.23.1680.942@0.23.1680.942" timestamp="1593956614016" />
-    <state x="503" y="226" key="Vcs.Push.Dialog.v2" timestamp="1594216958834">
-      <screen x="0" y="23" width="1920" height="965" />
+    <state x="440" y="220" key="Vcs.Push.Dialog.v2" timestamp="1594264528778">
+      <screen x="0" y="23" width="1680" height="935" />
     </state>
+    <state x="440" y="220" key="Vcs.Push.Dialog.v2/0.23.1680.935@0.23.1680.935" timestamp="1594264528778" />
     <state x="440" y="221" key="Vcs.Push.Dialog.v2/0.23.1680.942@0.23.1680.942" timestamp="1594041117511" />
     <state x="440" y="222" key="Vcs.Push.Dialog.v2/0.23.1680.945@0.23.1680.945" timestamp="1593524940437" />
     <state x="503" y="227" key="Vcs.Push.Dialog.v2/0.23.1920.972/1920.23.1680.1027@0.23.1920.972" timestamp="1594123136072" />
     <state x="503" y="226" key="Vcs.Push.Dialog.v2/1920.23.1680.1027/0.23.1920.965@0.23.1920.965" timestamp="1594216958834" />
-    <state x="13" y="119" width="1720" height="772" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1594115976821">
-      <screen x="0" y="23" width="1920" height="972" />
+    <state x="62" y="221" width="1720" height="767" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1594277766587">
+      <screen x="0" y="23" width="1920" height="965" />
     </state>
+    <state x="62" y="221" width="1720" height="767" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.23.1920.965/1920.23.1680.1027@0.23.1920.965" timestamp="1594277766587" />
     <state x="13" y="119" width="1720" height="772" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.23.1920.972/1920.23.1680.1027@0.23.1920.972" timestamp="1594115976821" />
     <state x="628" y="416" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1593523759702">
       <screen x="0" y="23" width="1680" height="945" />
@@ -252,11 +266,12 @@
       <screen x="0" y="23" width="1680" height="942" />
     </state>
     <state x="538" y="249" width="604" height="490" key="find.popup/0.23.1680.942@0.23.1680.942" timestamp="1594029804487" />
-    <state x="577" y="234" width="766" height="691" key="search.everywhere.popup" timestamp="1594215546073">
+    <state x="577" y="234" width="766" height="691" key="search.everywhere.popup" timestamp="1594291168559">
       <screen x="0" y="23" width="1920" height="965" />
     </state>
     <state x="505" y="229" width="670" height="674" key="search.everywhere.popup/0.23.1680.942@0.23.1680.942" timestamp="1594037863059" />
     <state x="505" y="230" width="670" height="676" key="search.everywhere.popup/0.23.1680.945@0.23.1680.945" timestamp="1593941895503" />
+    <state x="577" y="234" width="766" height="691" key="search.everywhere.popup/0.23.1920.965/1920.23.1680.1027@0.23.1920.965" timestamp="1594291168559" />
     <state x="577" y="234" width="766" height="691" key="search.everywhere.popup/1920.23.1680.1027/0.23.1920.965@0.23.1920.965" timestamp="1594215546073" />
   </component>
 </project>
