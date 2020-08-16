@@ -22,3 +22,18 @@
   z-index: 3;
   background-color: $popBack;
 }
+::-webkit-scrollbar {
+  width: 6px;
+  border-radius: 10px;
+  height: fit-content;
+}
+::-webkit-scrollbar-track {
+
+  background: $themeColor;
+}
+
+::-webkit-scrollbar-thumb {
+  background: white;
+  border-radius: 10px;
+
+}

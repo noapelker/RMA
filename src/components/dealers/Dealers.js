@@ -11,7 +11,7 @@ const Dealers = () => {
     const [addDealer, setAddDealer] = useState(false)
     const [data, setData] = useState([]);
     useEffect(() => {
-        getData("dealers").then(data => {
+        getData("dealers?$limit=1000").then(data => {
             setData(data.data)
         }).catch(err => console.log(err));
 

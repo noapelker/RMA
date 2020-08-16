@@ -1,0 +1,46 @@
+@import "styleApi";
+
+.exitPop {
+  width: calc(#{$max} - 20px);
+  margin-top: 10px;
+  margin-left: 10px;
+  @include flexible(row, flex-start);
+}
+
+.statusHolder {
+  @include flexible(row, space-evenly, center);
+  width: $max;
+}
+
+.dropGeneral {
+  @include flexible(column, center, center);
+  @include text($textSize);
+  @include size(calc(#{$max/3} - 20px), fit-content);
+  text-align: center;
+  margin: 20px 10px;
+  cursor: pointer;
+}
+
+.dropGeneralContainer {
+  @include flexible(row, space-evenly, center);
+  width: $max;
+}
+.inputGeneral{
+  background-color:$themeColor;
+  border: none;
+  border-bottom: 1px solid white;
+  color: white;
+  outline: none;
+  text-align: center;
+  font-weight: normal;
+  font-size: 1rem;
+  margin-top: 10px;
+
+}
+.progressContainer{
+  @include flexible(column,center,center);
+  font-weight: bold;
+  font-size: 1.2rem;
+  text-align: center;
+
+}

@@ -3,21 +3,22 @@ import {Orders} from "../../../Textblocks";
 import CostumeButton from "../../general/CostumeButton";
 
 const titles = Orders.orderPageHeaderTitles;
-const OrderHeader = ({data, header}) => {
+const OrderHeader = ({data}) => {
     return (
         <div className={'orderHeader'}>
-            <div className={'order orderHeaderLeft'}>
+            {console.log(data)}
+            {data && <div className={'order orderHeaderLeft'}>
                 <span>{titles.name} {data.name}</span>
                 <span>{titles.phone} {data.phone}</span>
-                <span>{titles.startDate} {header.startDate}</span>
-            </div>
+                <span>{titles.startDate} {new Date(data.creationDate).toLocaleDateString()}</span>
+            </div>}
             <div className={'order'}>
-                {titles.orderNum}{header.orderNum}
+                {titles.orderNum}{data.orderNum}
             </div>
             <div className={'order orderHeaderRight'}>
-                <CostumeButton text={header.status}
-                               parentClass={"status status" + header.status}/>
-                <span>{titles.endDate} {header.endDate}</span>
+                <CostumeButton text={data.status}
+                               parentClass={"status status" + data.status}/>
+                <span>{titles.endDate} {data.endDate||"In Process"}</span>
 
             </div>
         </div>

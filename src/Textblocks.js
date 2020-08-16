@@ -96,3 +96,11 @@ export const PSOptions = [
         name: 631
     }
 ]
+export const statusButtons = [
+    {name: "Pending", classVal: "status statusPending"},
+    {name: "Complete", classVal: "status statusComplete"},
+    {name: "Reject", classVal: "status statusReject"}
+]
+export const editOptions=[
+    "ps","version","touch","problems"
+]

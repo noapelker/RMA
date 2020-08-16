@@ -33,7 +33,7 @@ th, td {
 .delete {
   color: $redColor;
   border: addBorder(1px, $redColor);
-  margin: 0;
+  margin: 10px 0 0 0;
   @include button(#{$max/2}, 40px);
   left: 10px;
 }
@@ -78,7 +78,17 @@ th, td {
   color: $redColor;
   border: addBorder(1px, $redColor);
 }
+.hoverClass{
+  cursor: pointer;
+}
+.hoverClass:hover{
+  opacity: 0.8;
+}
 
+.chosenStatus {
+  font-weight: bold;
+  border-width: 5px;
+}
 .orderContainer {
   width: $max;
   display: flex;

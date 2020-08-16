@@ -6,15 +6,20 @@ import "../../../styles/order.scss"
 import OrderHeader from "./OrderHeader";
 import CostumeButton from "../../general/CostumeButton";
 import CostumePopUp from "../../general/CostumePopUp";
+import {withRouter} from "react-router-dom"
+import EditOrder from "./EditOrder";
 
 const Order = ({history}) => {
     const [data, setData] = useState(undefined);
     const [header, setHeader] = useState({});
     const [clickDelete, setClickDelete] = useState(false);
+    const [editOrder, setEditOrder] = useState({
+        edit: false,
+        data: undefined
+    });
     const deleteOrder = () => {
-        console.log(data)
+        getData("orders/" + data._id, "DELETE", undefined).then(_ => history.push("/"))
     }
-
     useEffect(() => {
         let url = history.location.pathname;
         const endPoint = url.substring(url.indexOf('/') + 1)
@@ -29,13 +34,38 @@ const Order = ({history}) => {
 
         })
     }, [history])
+
+    const onEditOrder = (val) => {
+        setEditOrder({edit: true, data: val})
+    }
+    const saveChanges = (val) => {
+        let index = data.products.findIndex(item => item === editOrder.data)
+        if (index !== -1) {
+            let temp=data.products;
+            temp[index]=val;
+            setData({...data,products:temp})
+            //.NEED TO DO FETCH
+        }
+        console.log(data.products)
+        console.log("data", editOrder.data)
+        console.log("after", val)
+
+
+    }
     return (
         <div className={'orderPage'}>
             {header && data &&
             <Fragment>
-                <OrderHeader data={data.products} header={header}/>}
+                {editOrder.edit && <EditOrder saveChanges={saveChanges} data={editOrder.data}
+                                              exitEditor={_ => setEditOrder({
+                                                  edit: false,
+                                                  data: undefined
+                                              })}/>}
+
+                <OrderHeader data={data} header={header}/>}
                 {clickDelete &&
-                <CostumePopUp title={popUp.deletePop.title +data.orderNum} subText={popUp.deletePop.text}
+                <CostumePopUp title={popUp.deletePop.title + data.orderNum}
+                              subText={popUp.deletePop.text}
                               classParent={'deletePop'}
                               onSubmitAnswer={(val) => val === 1 ? deleteOrder() : setClickDelete(false)}/>}
                 <div className={'orderPageTable'}>
@@ -60,6 +90,7 @@ const Order = ({history}) => {
                     <Table data={data.products} checkAble={true} rowClass={'orderRowOrder'}
                            headers={Orders.orderHeaders} edit
                            endpoint={"/order"}
+                           onEditFunc={onEditOrder}
                            order={Orders.orderTableSort}/>
                 </div>
             </Fragment>}
@@ -69,4 +100,4 @@ const Order = ({history}) => {
 
 };
 
-export default Order;
+export default withRouter(Order);

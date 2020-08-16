@@ -2,20 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8e3edcad-611b-4e26-aca1-84bb31665b06" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/general/CostumePopUp.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/pop.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/order/profile/EditOrder.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/styles/editOrder.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Textblocks.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Textblocks.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Utils.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Utils.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/dealers/Dealers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/dealers/Dealers.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/general/CostumeButton.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/general/CostumeButton.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/general/Table.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/general/Table.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/general/TableCell.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/general/TableCell.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/general/TableRow.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/general/TableRow.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/order/add/AddOrder.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/order/add/AddOrder.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/order/add/AddProduct.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/order/add/AddProduct.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/general/CostumePopUp.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/general/CostumePopUp.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/order/add/DropGeneral.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/order/add/DropGeneral.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/order/profile/Order.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/order/profile/Order.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/order/profile/OrderHeader.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/order/profile/OrderHeader.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/styles/App.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/App.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/addProduct.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/addProduct.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/styleApi.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/styleApi.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/addOrder.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/addOrder.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/dealers.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/dealers.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/item.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/item.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/pop.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/pop.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/styles/table.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/table.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -26,10 +28,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="CSS File" />
-        <option value="React Stateless Component" />
+        <option value="JavaScript File" />
         <option value="SCSS File" />
+        <option value="React Stateless Component" />
       </list>
     </option>
   </component>
@@ -149,7 +151,8 @@
       <workItem from="1594105205214" duration="15747000" />
       <workItem from="1594191936850" duration="16434000" />
       <workItem from="1594216953355" duration="2125000" />
-      <workItem from="1594275715843" duration="25542000" />
+      <workItem from="1594275715843" duration="25577000" />
+      <workItem from="1597569748117" duration="13342000" />
     </task>
     <task id="LOCAL-00001" summary="base home page FE">
       <created>1593524895157</created>
@@ -207,7 +210,14 @@
       <option name="project" value="LOCAL" />
       <updated>1594296130672</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="order page">
+      <created>1594303580096</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1594303580096</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -220,14 +230,18 @@
     <option name="LAST_COMMIT_MESSAGE" value="order page" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="483" y="84" key="CommitChangelistDialog2" timestamp="1594296130441">
+    <state x="304" y="155" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1597578495357">
+      <screen x="0" y="23" width="1680" height="941" />
+    </state>
+    <state x="304" y="155" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1680.941@0.23.1680.941" timestamp="1597578495357" />
+    <state x="483" y="84" key="CommitChangelistDialog2" timestamp="1594303579940">
       <screen x="0" y="23" width="1920" height="965" />
     </state>
     <state x="423" y="82" key="CommitChangelistDialog2/0.23.1680.935@0.23.1680.935" timestamp="1594264527186" />
     <state x="423" y="89" key="CommitChangelistDialog2/0.23.1680.942@0.23.1680.942" timestamp="1594041114831" />
     <state x="423" y="98" key="CommitChangelistDialog2/0.23.1680.945@0.23.1680.945" timestamp="1593524894945" />
     <state x="423" y="98" key="CommitChangelistDialog2/0.23.1680.947@0.23.1680.947" timestamp="1590064644278" />
-    <state x="483" y="84" key="CommitChangelistDialog2/0.23.1920.965/1920.23.1680.1027@0.23.1920.965" timestamp="1594296130441" />
+    <state x="483" y="84" key="CommitChangelistDialog2/0.23.1920.965/1920.23.1680.1027@0.23.1920.965" timestamp="1594303579940" />
     <state x="483" y="91" key="CommitChangelistDialog2/0.23.1920.972/1920.23.1680.1027@0.23.1920.972" timestamp="1594123134526" />
     <state x="483" y="91" key="CommitChangelistDialog2/1920.23.1680.1027/0.23.1920.965@0.23.1920.965" timestamp="1594216956878" />
     <state x="492" y="279" key="EditFileWatcherDialog" timestamp="1594018532702">
@@ -262,13 +276,13 @@
       <screen x="0" y="23" width="1680" height="942" />
     </state>
     <state x="341" y="133" key="SettingsEditor/0.23.1680.942@0.23.1680.942" timestamp="1593956614016" />
-    <state x="503" y="226" key="Vcs.Push.Dialog.v2" timestamp="1594296132169">
+    <state x="503" y="226" key="Vcs.Push.Dialog.v2" timestamp="1594303581488">
       <screen x="0" y="23" width="1920" height="965" />
     </state>
     <state x="440" y="220" key="Vcs.Push.Dialog.v2/0.23.1680.935@0.23.1680.935" timestamp="1594264528778" />
     <state x="440" y="221" key="Vcs.Push.Dialog.v2/0.23.1680.942@0.23.1680.942" timestamp="1594041117511" />
     <state x="440" y="222" key="Vcs.Push.Dialog.v2/0.23.1680.945@0.23.1680.945" timestamp="1593524940437" />
-    <state x="503" y="226" key="Vcs.Push.Dialog.v2/0.23.1920.965/1920.23.1680.1027@0.23.1920.965" timestamp="1594296132169" />
+    <state x="503" y="226" key="Vcs.Push.Dialog.v2/0.23.1920.965/1920.23.1680.1027@0.23.1920.965" timestamp="1594303581488" />
     <state x="503" y="227" key="Vcs.Push.Dialog.v2/0.23.1920.972/1920.23.1680.1027@0.23.1920.972" timestamp="1594123136072" />
     <state x="503" y="226" key="Vcs.Push.Dialog.v2/1920.23.1680.1027/0.23.1920.965@0.23.1920.965" timestamp="1594216958834" />
     <state x="62" y="221" width="1720" height="767" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1594277766587">
@@ -280,14 +294,16 @@
       <screen x="0" y="23" width="1680" height="945" />
     </state>
     <state x="628" y="416" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1680.945@0.23.1680.945" timestamp="1593523759702" />
-    <state x="615" y="255" width="691" height="502" key="find.popup" timestamp="1594303483970">
-      <screen x="0" y="23" width="1920" height="965" />
+    <state x="538" y="249" width="605" height="490" key="find.popup" timestamp="1597574944257">
+      <screen x="0" y="23" width="1680" height="941" />
     </state>
+    <state x="538" y="249" width="605" height="490" key="find.popup/0.23.1680.941@0.23.1680.941" timestamp="1597574944257" />
     <state x="538" y="249" width="604" height="490" key="find.popup/0.23.1680.942@0.23.1680.942" timestamp="1594029804487" />
     <state x="615" y="255" width="691" height="502" key="find.popup/0.23.1920.965/1920.23.1680.1027@0.23.1920.965" timestamp="1594303483970" />
-    <state x="577" y="234" width="766" height="691" key="search.everywhere.popup" timestamp="1594291168559">
-      <screen x="0" y="23" width="1920" height="965" />
+    <state x="505" y="229" width="671" height="674" key="search.everywhere.popup" timestamp="1597580962885">
+      <screen x="0" y="23" width="1680" height="941" />
     </state>
+    <state x="505" y="229" width="671" height="674" key="search.everywhere.popup/0.23.1680.941@0.23.1680.941" timestamp="1597580962885" />
     <state x="505" y="229" width="670" height="674" key="search.everywhere.popup/0.23.1680.942@0.23.1680.942" timestamp="1594037863059" />
     <state x="505" y="230" width="670" height="676" key="search.everywhere.popup/0.23.1680.945@0.23.1680.945" timestamp="1593941895503" />
     <state x="577" y="234" width="766" height="691" key="search.everywhere.popup/0.23.1920.965/1920.23.1680.1027@0.23.1920.965" timestamp="1594291168559" />

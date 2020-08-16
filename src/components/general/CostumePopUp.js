@@ -2,7 +2,7 @@ import React from 'react';
 import '../../styles/pop.scss'
 import CostumeButton from "./CostumeButton";
 
-const CostumePopUp = ({title, subText, onSubmitAnswer, classParent}) => {
+const CostumePopUp = ({title, subText, onSubmitAnswer, }) => {
     return (
         <div className={'addProductContainer'}>
             <div className={"popUp mediumPopUp"}>

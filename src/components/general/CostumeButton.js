@@ -4,7 +4,7 @@ const CostumeButton = ({mainClass, parentClass, imgSrc, text, onClickButton, tex
     return (
         <div className={mainClass || 'buttonMainClass'} onMouseEnter={onMouseEnter} onClick={e => {
             if (onClickButton)
-                onClickButton(e.target)
+                onClickButton(text)
         }}
              onMouseLeave={onMouseLeave}>
             {imgSrc ?

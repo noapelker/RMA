@@ -10,7 +10,7 @@ const DropGeneral = ({parentClass, textClass, title, options, data, setData}) =>
                 {Array.isArray(options) && <Select value={data} fullWidth classes={{
                     icon: `iconColor`, root: `inputClassChose`
                 }} onChange={event => {
-                    setData(event.target.value)
+                    setData(title,event.target.value)
                 }} label={"noa"}>
                     {options.map((item, key) =>  <MenuItem key={key} value={item}>{item}</MenuItem>)}
                 </Select>}

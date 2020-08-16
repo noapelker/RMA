@@ -4,10 +4,14 @@
   @include flexible(column, center, center);
   @include pop(30%, 25%)
 }
-
-.popUp {
-  @include flexible(column, space-evenly, center);
+.bigPopUp {
+  @include flexible(column, space-between, center);
+  @include pop(calc(50% - 20px), calc(45% - 20px));
+  padding: 10px;
 }
+
+
+
 .popUpNoButton{
   @include size($max)
 }
